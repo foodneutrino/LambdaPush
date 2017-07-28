@@ -1,0 +1,29 @@
+{
+  "session": {
+    "sessionId": "SessionId.b2aaf506-5b20-4cf2-8ab9-f8e718a66716",
+    "application": {
+      "applicationId": "amzn1.ask.skill.0b745e81-4748-48eb-a927-a1cc33e5ac56"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AFVPSY4IUF25UZZGKDTZCM7R3U6QMYZRJ2WYXJM5OKC7JG4VCHXIGD7UBL6HZ5WYJHJ4CMBFP6UIDMLS4K45IIVRWAE752QMG6PB2C7SGAA7X5VGIAYAZ5ETMRJCGKZWSAPY74PAPP65QJY2Y4G65C76MK4OV4B62OEPFFSQ4Y7BYE3G5AF7F4XJX2OHLBDH7VKCGC77PYG2IHI"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.9c247f1f-5756-4bcf-b749-829c39b51969",
+    "locale": "en-US",
+    "timestamp": "2017-07-24T20:44:24Z",
+    "intent": {
+      "name": "TestPublish",
+      "slots": {
+        "message": {
+          "name": "message",
+          "value": "hello"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

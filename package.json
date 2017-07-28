@@ -1,0 +1,13 @@
+{
+  "name": "LambdaPush",
+  "version": "1.0.0",
+  "description": "Test a lambda publish to IoT",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-sdk": "^1.0.11",
+    "aws-iot-device-sdk": "^2.0.1"
+  }
+}
