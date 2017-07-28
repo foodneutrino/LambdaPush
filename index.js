@@ -44,35 +44,21 @@ const handlers = {
 
         const device = AwsIot.thingShadow(config);
 
-        //console.log("Attempt to connect to AWS ");
-        //device.on("connect",function(){
-        //    console.log("Connected to AWS ");
-        //    // publish to clientId/Topic
-        //    device.publish('PublishTest/image_request', JSON.stringify(txPayload), function(){
-        //      console.log("Response From Publish")
-        //  });
-        //});
+        console.log("Attempt to connect to AWS ");
+        device.on("connect",function(){
+            console.log("Connected to AWS ");
+            // publish to clientId/Topic
+            device.publish('PublishTest/image_request', JSON.stringify(txPayload), function(){
+              console.log("Response From Publish")
+              device.end()
+          });
+        });
 
-        device.on('close', () => function() {
-            // get this output
+        device.on('close', function() {
             console.log('Recieved close from IoT')
-            this.emit(':tell', rxPayload)
         })
 
-        device.end(false, () => function(){
-            // didnt see
-            console.log('end callback')
-        })
-
-        console.log('Function Complete');
-        //this.emit(':tell', 'I told your mirror to say ' + rxPayload);
-        console.log(`After emit`);
-        //setTimeout(() => {
-        //  console.log('Waiting for timeout or completion')
-        //  this.emit(':tell', 'I told your mirror to say ' + payload)
-        //}, 400)
-
-        //this.emit(':tell', rxPayload);
+        this.emit(':tell', rxPayload);
     },
     'AMAZON.HelpIntent': function () {
         const speechOutput = this.t('HELP_MESSAGE');
